@@ -32,11 +32,15 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(16),
-                      child: Image.asset(
-                        'assets/images/1.jpg',
+                      child: SizedBox(
                         height: 300,
-                        width: double.infinity,
-                        fit: BoxFit.cover,
+                        child: Center(
+                            child: FittedBox(
+                          fit: BoxFit.contain,
+                          child: Image.asset(
+                            'assets/images/1.jpg',
+                          ),
+                        )),
                       ),
                     ),
                     const SizedBox(height: 25),
